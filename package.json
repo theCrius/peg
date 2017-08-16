@@ -1,0 +1,16 @@
+{
+  "name": "peg",
+  "version": "1.0.0",
+  "description": "Basic tranformer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm install && node index.js"
+  },
+  "author": "Claudio Vallesi",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "request": "^2.81.0"
+  }
+}
