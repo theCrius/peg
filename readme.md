@@ -1,4 +1,4 @@
-## What does this do?
+## What?
 
 Get a JSON from [here](http://files.peg.co/zoella_videos.json) and return the following as a JSON:
 
@@ -7,9 +7,9 @@ Get a JSON from [here](http://files.peg.co/zoella_videos.json) and return the fo
 - The total number of views for all 12 videos
 - the average (mean) time interval between Zoella's last 12 videos
 
-# What do I need to run this?
+## How?
 
-Just Node and NPM. Type:
+Just install Node and NPM. Type:
 
 ```
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
@@ -22,4 +22,5 @@ Move into the project folder and type:
 npm start
 ```
 
-The first run will download the libraries needed by it so it could take a couple of seconds. You will see the result as JSON in the terminal.
+The first run will download the libraries needed by it so it could take a couple of seconds. You will see the result as JSON in the terminal. Can be easily converted to microservice.
+I left the data as raw as possible as different frontend could need different level of precision. Also no tests but I'd like to get back to it and add them. It means it will never happens and you know it.

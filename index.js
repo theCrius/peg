@@ -1,6 +1,7 @@
 'use strict'
 const request = require('request');
 const moment = require('moment');
+const _ = require('lodash');
 
 function init() {
   getJSON('http://files.peg.co/zoella_videos.json')
@@ -45,7 +46,7 @@ function getMostLikedVideoTitle(videos) {
 function getAverageLikePercent(videos) {
   let totalPercentage = 0;
   videos.forEach((video) => {
-      totalPercentage += video.likePercentage;
+    totalPercentage += video.likePercentage;
   });
   return totalPercentage/videos.length;
 }
@@ -53,12 +54,14 @@ function getAverageLikePercent(videos) {
 function getTotalViews(videos) {
   let totalViews = 0;
   videos.forEach((video) => {
-      totalViews += video.views;
+    totalViews += video.views;
   });
   return totalViews;
 }
 
+
 function getUpdateFrequency(videos) {
+  videos = _.sortBy(videos, [(video) => {moment(video.published_at).valueOf()}]);
   let differences = [];
   for (let i = 0; i < videos.length; i++) {
     if (videos[i+1] !== undefined) {
