@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install && node index.js"
+    "start": "npm install && node index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Claudio Vallesi",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
-    "request": "^2.81.0"
-  }
+    "request": "^2.81.0",
+    "snyk": "^1.192.3"
+  },
+  "snyk": true
 }
